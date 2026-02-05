@@ -1,0 +1,60 @@
+.text-accent { color: #d87093 !important; }
+.letter-spacing { letter-spacing: 2px; }
+
+/* Input Styling */
+.elegant-input {
+    border: 1px solid #f0f0f0;
+    background-color: #fafafa;
+    padding: 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.elegant-input:focus {
+    background-color: #ffffff;
+    border-color: #ffb6c1;
+    box-shadow: 0 0 0 0.25rem rgba(216, 112, 147, 0.1);
+}
+
+/* Button Styling */
+.btn-accent {
+    background-color: #d87093;
+    color: white;
+    border: none;
+    font-weight: 600;
+    transition: transform 0.2s;
+}
+
+.btn-accent:hover {
+    background-color: #c71585;
+    transform: translateY(-2px);
+    color: white;
+}
+
+/* Preview Section */
+.border-dashed {
+    border: 2px dashed #ffc0cb;
+    background-color: #fffafb;
+}
+
+.preview-item .label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: #d87093;
+    margin-bottom: 2px;
+}
+
+.preview-item .value {
+    font-size: 1.1rem;
+    color: #444;
+    word-wrap: break-word;
+}
+
+.alert-pink {
+    background-color: #fff0f5;
+    color: #d87093;
+    border: 1px solid #fce4ec;
+}
+
+.italic { font-style: italic; }

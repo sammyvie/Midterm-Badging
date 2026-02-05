@@ -1,0 +1,41 @@
+.text-accent {
+    color: #d87093 !important;
+}
+
+/* Search Bar Styling */
+.input-group:focus-within {
+    border-color: #ffb6c1 !important;
+    box-shadow: 0 0 0 0.25rem rgba(216, 112, 147, 0.1) !important;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+/* Service Cards */
+.service-card {
+    border-radius: 1.25rem;
+    transition: all 0.3s ease;
+    background: #ffffff;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.08) !important;
+}
+
+.category-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: #fff0f5;
+    color: #d87093;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 50px;
+    letter-spacing: 1px;
+}
+
+.btn-link:hover {
+    color: #c71585 !important;
+}

@@ -1,0 +1,38 @@
+/* Custom Theme Colors */
+.bg-accent {
+    background-color: #d87093 !important; /* Rose Gold/Pink */
+}
+
+.border-accent {
+    border-color: #ffb6c1 !important;
+}
+
+.text-accent {
+    color: #d87093 !important;
+}
+
+/* Custom Date Badge */
+.date-badge {
+    background-color: #fff0f5;
+    color: #d87093;
+    min-width: 80px;
+    border: 1px solid #fce4ec;
+}
+
+/* Typography */
+.letter-spacing {
+    letter-spacing: 2px;
+}
+
+.card {
+    background: #ffffff;
+}
+
+.lead {
+    font-weight: 300;
+}
+
+/* Styling the horizontal rule */
+hr {
+    color: #ffc0cb;
+}

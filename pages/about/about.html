@@ -1,0 +1,40 @@
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+        <div class="card-header bg-accent text-white p-4 border-0">
+          <h2 class="h4 mb-0 fw-light text-uppercase letter-spacing">
+            {{ 'About This Portal' | uppercase }}
+          </h2>
+        </div>
+
+        <div class="card-body p-5">
+          <div class="d-flex align-items-center mb-4">
+            <div class="date-badge p-3 rounded-3 text-center me-3">
+              <span class="d-block small text-uppercase">Today</span>
+              <span class="fw-bold">{{ today | date:'dd' }}</span>
+            </div>
+            <div>
+              <p class="text-muted mb-0">Current System Date:</p>
+              <h5 class="fw-normal mb-0">{{ today | date:'fullDate' }}</h5>
+            </div>
+          </div>
+
+          <hr class="my-4 opacity-10">
+
+          <p class="lead text-secondary lh-lg">
+            This portal serves as a centralized hub for the community. It lists
+            <strong>service offerings</strong>, provides real-time <strong>announcements</strong>,
+            and ensures easy access to help desk resources.
+          </p>
+
+          <div class="mt-4 p-3 bg-light rounded-3 border-start border-4 border-accent">
+            <small class="text-muted italic">
+              Developed for the Midterm Badging Project 2026.
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

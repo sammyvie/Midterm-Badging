@@ -1,0 +1,53 @@
+<div class="container py-5">
+  <div class="row g-5">
+
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm p-4 rounded-4">
+        <h2 class="h4 mb-4 text-accent fw-bold letter-spacing">CONTACT US</h2>
+        <form>
+          <div class="mb-3">
+            <label class="form-label small fw-bold text-muted">NAME</label>
+            <input [(ngModel)]="form.name" name="name" class="form-control elegant-input" placeholder="Your Name">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label small fw-bold text-muted">EMAIL</label>
+            <input [(ngModel)]="form.email" name="email" class="form-control elegant-input" placeholder="email@example.com">
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label small fw-bold text-muted">MESSAGE</label>
+            <textarea [(ngModel)]="form.message" name="message" class="form-control elegant-input" rows="5" placeholder="Write your message here..."></textarea>
+          </div>
+
+          <button type="button" class="btn btn-accent w-100 py-2 rounded-pill shadow-sm">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="sticky-top" style="top: 2rem;">
+        <h3 class="h5 mb-4 text-muted letter-spacing">FORM PREVIEW</h3>
+        <div class="preview-card p-4 rounded-4 border-dashed">
+          <div class="preview-item mb-3">
+            <span class="label">NAME</span>
+            <p class="value">{{ form.name | uppercase }}</p>
+          </div>
+          <div class="preview-item mb-3">
+            <span class="label">EMAIL</span>
+            <p class="value text-lowercase">{{ form.email }}</p>
+          </div>
+          <div class="preview-item">
+            <span class="label">MESSAGE</span>
+            <p class="value italic">"{{ form.message | truncate:120 }}"</p>
+          </div>
+        </div>
+
+        <div class="mt-4 alert alert-pink rounded-3 small">
+          <i class="bi bi-info-circle me-2"></i> This is a live preview of your input.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

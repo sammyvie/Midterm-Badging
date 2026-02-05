@@ -1,0 +1,31 @@
+<div class="container py-5">
+  <div class="welcome-header text-center mb-5 p-5 shadow-sm rounded-4">
+    <h2 class="display-5 fw-light">Welcome to the <span class="fw-bold text-accent">Community Help Desk</span></h2>
+    <p class="text-muted mt-2">Your central hub for support and updates</p>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <h3 class="h5 text-uppercase letter-spacing mb-4 border-start border-4 border-accent ps-3">
+        Latest Updates
+      </h3>
+    </div>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-md-6 col-lg-4" *ngFor="let post of posts$ | async">
+      <div class="card h-100 border-0 shadow-sm hover-lift">
+        <div class="card-body p-4">
+          <div class="mb-2 text-accent fw-bold small text-uppercase">Update</div>
+          <h4 class="card-title h5 mb-3">{{ post.title | uppercase }}</h4>
+          <p class="card-text text-secondary">
+            {{ post.body | truncate:100 }}
+          </p>
+        </div>
+        <div class="card-footer bg-transparent border-0 pb-4 px-4">
+          <a href="#" class="btn btn-sm btn-outline-accent rounded-pill px-3">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

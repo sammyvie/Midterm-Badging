@@ -1,0 +1,41 @@
+<div class="container py-5">
+  <div class="row mb-5 justify-content-center">
+    <div class="col-md-8 text-center">
+      <h2 class="display-6 fw-light mb-4">Services & <span class="text-accent fw-bold">Announcements</span></h2>
+
+      <div class="input-group input-group-lg shadow-sm rounded-pill overflow-hidden border">
+        <span class="input-group-text bg-white border-0 ps-4">
+          <i class="bi bi-search text-muted"></i> </span>
+        <input
+          type="text"
+          class="form-control border-0 py-3"
+          [(ngModel)]="search"
+          (ngModelChange)="onSearchChange($event)"
+          placeholder="What are you looking for?">
+      </div>
+      <div class="mt-2 small text-muted">Searching through latest community offerings</div>
+    </div>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <div class="col" *ngFor="let post of posts$ | async">
+      <div class="card h-100 border-0 shadow-sm service-card">
+        <div class="card-body p-4">
+          <div class="category-tag mb-3">Service Update</div>
+          <h4 class="card-title h6 fw-bold mb-3">{{ post.title | uppercase }}</h4>
+          <p class="card-text text-secondary small">
+            {{ post.body | truncate:120 }}
+          </p>
+        </div>
+        <div class="card-footer bg-transparent border-0 px-4 pb-4">
+          <hr class="mb-3 opacity-10">
+          <button class="btn btn-link text-accent p-0 text-decoration-none fw-bold">View Details →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center py-5" *ngIf="(posts$ | async)?.length === 0">
+    <p class="text-muted">No services found matching "{{ search }}"</p>
+  </div>
+</div>
